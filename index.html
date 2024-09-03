@@ -30,8 +30,8 @@
                     <div class="collapse navbar-collapse navbar-right">
                         <ul class="navbar-nav ml-auto">
                             <li class="nav-item-active nav-link"><a class="nav-link" href="#home">Home</a></li>
-                            <li class="nav-item nav-link"><a class="nav-link" href="#product">Product</a></li>
                             <li class="nav-item nav-link"><a class="nav-link" href="#service">Services</a></li>
+                            <li class="nav-item nav-link"><a class="nav-link" href="#product">Products</a></li>
                             <li class="nav-item nav-link"><a class="nav-link" href="#outlet">Outlets</a></li>
                             <li class="nav-item nav-link"><a class="nav-link" href="#franchise">Franchise</a></li>
                         </ul>
@@ -41,8 +41,8 @@
                             aria-expanded="false"><span class="navbar-toggler-icon"></span></button>
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
                             <a class="dropdown-item" href="#home">Home</a>
-                            <a class="dropdown-item" href="#product">Product</a>
                             <a class="dropdown-item" href="#service">Services</a>
+                            <a class="dropdown-item" href="#product">Products</a>
                             <a class="dropdown-item" href="#outlet">Outlets</a>
                             <a class="dropdown-item" href="#franchise">Franchise</a>
                         </div>
@@ -89,8 +89,7 @@
             </div>
             <!--News End-->
 
-            <!--Products-->
-            <div class="text-center bg-bs-gray" id="product">
+            <div class="text-center bg-bs-gray" id="">
                 <div class="container">
                     <div class="row justify-content-center">
                         <div class="mt-5">
@@ -102,7 +101,7 @@
                     </div>
                 </div>
 
-                <!-- Product Images -->
+                <!--Images -->
                 <div class="container">
                     <div class="bg-image link-zoom row">
                         <div class="bg-image col-lg-4 col-md-12 mb-4 mb-lg-0 link-zoom">
@@ -128,7 +127,7 @@
                 </div>
             </div>
 
-            <div>
+            <div id="product">
                 <div class="container pt-5 mt-3">
                     <h2 class="fw-bolder mb-4 text-center text-black">Our Products</h2>
                     <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
@@ -295,61 +294,132 @@
             <!--Outlets End-->
 
             <!--Franchise-->
-            <div class="container-fluid bg-danger pt-4">
-                <div class="container px-4 mt-4">
-                    <h1 class="fw-bolder text-center text-white">Interested in Franchising?</h1>
-                    <form class="was-validated mt-4" action="https://www.google.com" method="post" onsubmit="return validate();">
-                        <div class="mb-3">
-                            <textarea class="form-control is-invalid" id="nameTextarea" placeholder="Input your name here" required></textarea>
-                            <div class="invalid-feedback">
-                                Please enter a name in the textarea.
-                            </div>
+            <div class="container mb-5">
+                <h1 class="text-center fw-bold">Interested in Franchising?</h1>
+                <form action="https://www.google.com" method="POST" class="p-4 rounded shadow-sm bg-white">
+                    <div class="row mb-3">
+                        <div class="col-md-4">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="name" name="name" placeholder="Name" required>
                         </div>
-                        <div class="mb-3">
-                            <textarea class="form-control is-invalid" id="emailTextarea" placeholder="Email address" required></textarea>
-                            <div class="invalid-feedback">
-                                Please enter an email address in the textarea.
-                            </div>
+                        <div class="col-md-4">
+                            <label for="phone" class="form-label">Phone Number</label>
+                            <input type="text" class="form-control" id="phone" name="phone" placeholder="Phone Number" required>
                         </div>
-                        <div class="mb-3">
-                            <textarea class="form-control is-invalid" id="phoneTextarea" placeholder="Phone number" required></textarea>
-                            <div class="invalid-feedback">
-                                Please enter a phone number in the textarea.
-                            </div>
+                        <div class="col-md-4">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" name="email" placeholder="Email" required>
                         </div>
-                        <div class="mb-3">
-                            <textarea class="form-control is-invalid" id="messageTextarea" placeholder="Message" required></textarea>
-                            <div class="invalid-feedback">
-                                Please enter a message in the textarea.
-                            </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-12">
+                            <label for="message" class="form-label">Additional Message</label>
+                            <textarea class="form-control" id="message" name="message" placeholder="Additional Message and Questions" rows="4" required></textarea>
                         </div>
-                        <div class="text-center">
-                            <input type="submit" value="KIRIM" class="btn btn-primary">
-                        </div>
-                    </form>
-                </div>
+                    </div>
+                    <div class="buttons">
+                        <button class="btn btn-outline-primary px-4" type="submit" value="KIRIM">Send</button>
+                    </div>
+                </form>
             </div>
             <!--Franchise End-->
-            
-            <!--Closing-->
-            <div class="bg-dark py-3">
-                <div class="container d-flex justify-content-between align-items-center flex-column flex-sm-row">
-                    <div class="text-white mb-2 mb-sm-0">Darrell Athaya</div>
-                    <div class="social-links">
-                        <a href="#" target="_blank" class="text-white me-3">
-                            <i class="bi bi-instagram"></i> Instagram
-                        </a>
-                        <a href="#" target="_blank" class="text-white me-3">
-                            <i class="bi bi-linkedin"></i> Linkedin
-                        </a>
-                        <a href="#" target="_blank" class="text-white">
-                            <i class="bi bi-github"></i> Github
-                        </a>
+
+            <!-- Closing Section -->
+            <div class="container-fluid bg-dark pt-4">
+                <footer class="text-white text-lg-start">
+                  <!-- Grid container -->
+                  <div class="container p-4">
+                    <!--Grid row-->
+                    <div class="row mt-4">
+                      <!--Grid column-->
+                      <div class="col-lg-4 col-md-12 mb-4 mb-md-0">
+                        <h5 class="text-uppercase mb-4">Follow Me</h5>
+    
+                        <div class="mt-4">
+                            <a
+                            class="btn btn-primary btn-floating m-1"
+                            style="background-color: #dd4b39"
+                            href="#!"
+                            role="button"
+                            ><i class="fab fa-google"></i
+                           ></a>
+             
+                         <!-- Instagram -->
+                         <a
+                            class="btn btn-primary btn-floating m-1"
+                            style="background-color: #ac2bac"
+                            href="https://www.instagram.com/darrellathaya/"
+                            role="button"
+                            ><i class="fab fa-instagram"></i
+                           ></a>
+             
+                         <!-- Linkedin -->
+                         <a
+                            class="btn btn-primary btn-floating m-1"
+                            style="background-color: #0082ca"
+                            href="https://www.linkedin.com/in/darrell-athaya-810a67249/"
+                            role="button"
+                            ><i class="fab fa-linkedin-in"></i
+                           ></a>
+                         <!-- Github -->
+                         <a
+                            class="btn btn-primary btn-floating m-1"
+                            style="background-color: #333333"
+                            href="https://github.com/darrellathaya"
+                            role="button"
+                            ><i class="fab fa-github"></i
+                           ></a>
+                        </div>
+                      </div>
+                      <!--Grid column-->
+              
+                      <!--Grid column-->
+                      <div class="col-lg-4 col-md-6 mb-4 mb-md-0">           
+                        <ul class="fa-ul" style="margin-left: 1.65em;">
+                          <li class="mb-3">
+                            <span class="fa-li"><i class="fas fa-home"></i></span><span class="ms-2">Surabaya, East Java, Indonesia</span>
+                          </li>
+                          <li class="mb-3">
+                            <span class="fa-li"><i class="fas fa-envelope"></i></span><span class="ms-2">darrell.athaya29@gmail.com</span>
+                          </li>
+                          <li class="mb-3">
+                            <span class="fa-li"><i class="fas fa-phone"></i></span><span class="ms-2">+62-811-291-204</span>
+                          </li>
+                        </ul>
+                      </div>
+                      <!--Grid column-->
+              
+                      <!--Grid column-->
+                      <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+                        <h5 class="text-uppercase mb-4">Opening hours</h5>
+              
+                        <table class="table text-white">
+                          <body class="fw-normal">
+                            <tr>
+                              <td>Mon - Fri:</td>
+                              <td>8am - 5pm</td>
+                            </tr>
+                            <tr>
+                              <td>Sat - Sun:</td>
+                              <td>8am - 1am</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <!--Grid column-->
                     </div>
-                </div>
-            </div>
+                    <!--Grid row-->
+                  </div>
+                  <!-- Grid container -->
+              
+                  <!-- Copyright -->
+                  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+                    Darrell Athaya Refaldi
+                  </div>
+                  <!-- Copyright -->
+                </footer>
+              </div>       
             <!--Closing End-->
         </div>
 </body>
-
 </html>
