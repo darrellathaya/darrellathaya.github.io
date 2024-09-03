@@ -295,45 +295,42 @@
             <!--Outlets End-->
 
             <!--Franchise-->
-            <div>
-                <div class="container-fluid bg-danger pt-4">
-                    <div class="container justify-content-center px-4 mt-4">
-                        <h1 class="fw-bolder text-center">Interested in Franchising?</h1>
-                        <form class="was-validated" action="https://www.google.com" method="post"
-                            onsubmit="return validate();">
-                            <div class="mt-4 mb-3">
-                                <textarea class="form-control is-invalid" id="validationTextarea"
-                                    placeholder="Input your name here" required></textarea>
-                                <div class="invalid-feedback">
-                                    Please enter a name in the textarea.
-                                </div>
-                                <div class="mt-4 mb-3">
-                                    <textarea class="form-control is-invalid" id="validationTextarea"
-                                        placeholder="Email address" required></textarea>
-                                    <div class="invalid-feedback">
-                                        Please enter a email address in the textarea.
-                                    </div>
-                                    <div class="mt-4 mb-3">
-                                        <textarea class="form-control is-invalid" id="validationTextarea"
-                                            placeholder="Phone number" required></textarea>
-                                        <div class="invalid-feedback">
-                                            Please enter a phone number in the textarea.
-                                        </div>
-                                        <div class="mt-4 mb-3">
-                                            <textarea class="form-control is-invalid" id="validationTextarea"
-                                                placeholder="Message" required></textarea>
-                                            <div class="invalid-feedback">
-                                                Please enter a message in the textarea.
-                                            </div>
-                                        </div>
-                                        <div class="text-center">
-                                            <input type="submit" value="KIRIM" class="btn btn-primary text-center">
-                                        </div>
-                        </form>
+            <div class="container mt-5">
+            <h2>Registration Form</h2>
+                <form action="{{ route('register') }}" method="POST" novalidate>
+                    @csrf
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Name</label>
+                        <input type="text" class="form-control @error('name') is-invalid @enderror" id="name" name="name" value="{{ old('name') }}">
+                        @error('name')
+                        <div class="invalid-feedback">
+                            {{ $message }}
+                        </div>
+                        @enderror
                     </div>
-                </div>
-                <!--Franchise End-->
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control @error('email') is-invalid @enderror" id="email" name="email" value="{{ old('email') }}">
+                        @error('email')
+                        <div class="invalid-feedback">
+                            {{ $message }}
+                        </div>
+                        @enderror
+                    </div>
+                    <div class="mb-3">
+                        <label for="password" class="form-label">Password</label>
+                        <input type="password" class="form-control @error('password') is-invalid @enderror" id="password" name="password">
+                        @error('password')
+                        <div class="invalid-feedback">
+                            {{ $message }}
+                        </div>
+                        @enderror
+                    </div>
+                    <button type="submit" class="btn btn-primary">Register</button>
+                </form>
             </div>
+                <!--Franchise End-->
+        </div>
 </body>
 
 </html>
